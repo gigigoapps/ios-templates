@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.viperApplication</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.storyboardApplication</string>
+		<string>com.apple.dt.unit.coreDataCocoaTouchApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses VIPER and create the basic folder structure </string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Swift</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>ViewController.swift:comments</string>
+						<string>ViewController.swift:imports:importCocoa</string>
+						<string>ViewController.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+						<string>ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+						<string>ViewController.swift:implementation:methods:viewDidLoad:super</string>
+						<string>ViewController.swift:implementation:methods:didReceiveMemoryWarning(override func didReceiveMemoryWarning(\))</string>
+						<string>ViewController.swift:implementation:methods:didReceiveMemoryWarning:super</string>
+						<string>Global</string>
+						<string>App</string>
+						<string>Frameworks</string>
+						<string>Common</string>
+						<string>Sections</string>
+						<string>Resources</string>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>Global</key>
+		<dict>
+			<key>Path</key>
+			<string>Global</string>
+		</dict>
+		<key>App</key>
+		<dict>
+			<key>Path</key>
+			<string>App</string>
+		</dict>
+		<key>Frameworks</key>
+		<dict>
+			<key>Path</key>
+			<string>Frameworks</string>
+		</dict>
+		<key>Common</key>
+		<dict>
+			<key>Path</key>
+			<string>Common</string>
+		</dict>
+		<key>Sections</key>
+		<dict>
+			<key>Path</key>
+			<string>Sections</string>
+		</dict>
+		<key>Resources</key>
+		<dict>
+			<key>Path</key>
+			<string>Resources</string>
+		</dict>
+		<key>Base.lproj/Main.storyboard</key>
+		<dict>
+			<key>Path</key>
+			<string>Main.storyboard</string>
+			<key>SortOrder</key>
+			<integer>99</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>
