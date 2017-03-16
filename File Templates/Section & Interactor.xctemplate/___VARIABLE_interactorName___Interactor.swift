@@ -8,11 +8,13 @@
 
 import Foundation
 
-protocol ___VARIABLE_interactorName:identifier___Output {
+protocol ___VARIABLE_interactorName:identifier___InteractorOutput {
     
 }
 
 struct ___VARIABLE_interactorName:identifier___Interactor {
+    
+    // MARK: - Interactor output
     
     var output: ___VARIABLE_interactorName:identifier___Output?
     
