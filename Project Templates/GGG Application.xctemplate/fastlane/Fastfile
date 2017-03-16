@@ -1,0 +1,52 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.97.2"
+import "FastlaneHelpers"
+default_platform :ios
+
+platform :ios do
+
+  before_all do
+
+  end
+
+  desc "Submit a new Beta Production Build to Applivery"
+  lane :production do
+    deploy_to_applivery(
+      environment: "Production",
+      skip_certs: true,
+      app_id: "58b53efd5ef2ecaa6b17fef7")
+  end
+
+  after_all do |lane|
+    notification(subtitle: "Binario subido con éxito, CID!!! ", message: "Success")
+    say "Binario subido con éxito"
+    clean_build_artifacts
+  end
+
+  error do |lane, exception|
+    notification(subtitle: exception.message, message: "Error")
+    message = "CID, No se pudo subir el binario. " + exception.message
+    sh("say -v Monica #{message}")
+  end
+
+end
+
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer

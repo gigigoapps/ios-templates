@@ -1,0 +1,32 @@
+
+private_lane :deploy_to_applivery do |options|
+  ensure_git_status_clean
+  update_build_number
+
+  scheme = "CIDApp"
+  app_name = "CIDApp"
+  shield = "v#{get_version_number}-#{get_build_number}-blue"
+
+  if !options[:skip_certs]
+    cert
+    sigh
+  end
+  badge(
+      # dark: true,
+      no_badge: true,
+      shield: shield)
+  gym(
+    scheme: scheme,
+    export_method: 'enterprise')
+  applivery(
+    app_id: options[:app_id],
+    api_key: "af2af6cabd63c3776f2edcdf025b35ab2892cf92",
+    name: app_name)
+  clean_build_artifacts
+  clean_icons
+end
+
+
+private_lane :update_build_number do
+  increment_build_number(build_number: number_of_commits)
+end
