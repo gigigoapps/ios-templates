@@ -15,9 +15,7 @@
 	<array>
 		<dict>
 			<key>Frameworks</key>
-			<array>
-				<string>GIGLibrary</string>
-			</array>
+			<array/>
 		</dict>
 	</array>
 	<key>Concrete</key>
@@ -38,6 +36,7 @@
 					<key>Nodes</key>
 					<array>
 						<string>Info.plist</string>
+						<string>../Cartfile</string>
 						<string>Assets.xcassets</string>
 						<string>AppDelegate.swift</string>
 						<string>../fastlane</string>
@@ -54,6 +53,13 @@
 	</array>
 	<key>Definitions</key>
 	<dict>
+		<key>../Cartfile</key>
+		<dict>
+			<key>TargetIndices</key>
+			<array/>
+			<key>Path</key>
+			<string>../Cartfile</string>
+		</dict>
 		<key>Info.plist</key>
 		<dict>
 			<key>Group</key>
@@ -83,12 +89,10 @@
 		</dict>
 		<key>../fastlane</key>
 		<dict>
+			<key>TargetIndices</key>
+			<array/>
 			<key>Path</key>
 			<string>fastlane</string>
-			<key>Group</key>
-			<array>
-				<string>Non-iOS Resources</string>
-			</array>
 		</dict>
 		<key>Global</key>
 		<dict>
