@@ -9,7 +9,7 @@
 import UIKit
 import GIGLibrary
 
-class ___FILEBASENAMEASIDENTIFIER___VC: UIViewController, ___FILEBASENAMEASIDENTIFIER___UI, Instantiable {
+class ___FILEBASENAMEASIDENTIFIER___VC: UIViewController, ___FILEBASENAMEASIDENTIFIER___UI {
     
     // MARK: - Attributtes
     
@@ -21,6 +21,9 @@ class ___FILEBASENAMEASIDENTIFIER___VC: UIViewController, ___FILEBASENAMEASIDENT
         super.viewDidLoad()
         self.presenter?.viewDidLoad()
     }
+}
+
+extension ___FILEBASENAMEASIDENTIFIER___VC: Instantiable {
     
     // MARK: - Instantiable
     
