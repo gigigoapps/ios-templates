@@ -16,6 +16,6 @@ struct ___VARIABLE_interactorName:identifier___Interactor {
     
     // MARK: - Interactor output
     
-    var output: ___VARIABLE_interactorName:identifier___Output?
+    var output: ___VARIABLE_interactorName:identifier___InteractorOutput?
     
 }
