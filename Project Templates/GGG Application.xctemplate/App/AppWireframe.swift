@@ -1,23 +1,29 @@
 //
-//  ___FILENAME___
-//  ___PACKAGENAME___
+//  AppWireframe.swift
+//  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
 class AppWireframe {
     
-    // MARK: - Public Properties
-    
-    var appController: AppController?
-    
-    // MARK: - Private Properties
-    
     var window: UIWindow?
     
+    private var navigationController = UINavigationController()
+
+    func showAppLaunchWireframe() {
+//        let loginWireframe = LoginWireframe(
+//            navigationController: self.navigationController)
+//        guard let loginVC = loginWireframe.showLogin() else {
+//            LogWarn("loginVC not found")
+//            return
+//        }
+//        self.navigationController.setViewControllers([loginVC], animated: false)
+        window?.rootViewController = self.navigationController
+    }
     
     // MARK: UIViewController
     

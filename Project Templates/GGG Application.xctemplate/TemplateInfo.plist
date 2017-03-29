@@ -13,6 +13,30 @@
 	</array>
 	<key>Targets</key>
 	<array>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>___PACKAGENAME___</string>
+				<key>SharedSettings</key>
+				<dict>
+					<key>PRODUCT_NAME</key>
+					<string>$(TARGET_NAME)</string>
+				</dict>
+				<key>BuildPhases</key>
+				<array>
+					<dict>
+						<key>Class</key>
+						<string>ShellScript</string>
+						<key>Name</key>
+						<string>SwiftLint Run Script</string>
+						<key>ShellPath</key>
+						<string>/bin/bash</string>
+						<key>ShellScript</key>
+						<string>&quot;${SRCROOT}/___PACKAGENAME___/Scripts/SwiftLint_Run_Script.sh&quot;</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<dict>
 			<key>Frameworks</key>
 			<array/>
@@ -36,14 +60,13 @@
 					<key>Nodes</key>
 					<array>
 						<string>Info.plist</string>
-						<string>../Cartfile</string>
-						<string>Assets.xcassets</string>
 						<string>AppDelegate.swift</string>
 						<string>../fastlane</string>
 						<string>Global</string>
 						<string>Common</string>
 						<string>Sections</string>
 						<string>Resources</string>
+						<string>Frameworks</string>
 						<string>AppWireframe.swift</string>
 						<string>AppController.swift</string>
 					</array>
@@ -53,69 +76,6 @@
 	</array>
 	<key>Definitions</key>
 	<dict>
-		<key>../Cartfile</key>
-		<dict>
-			<key>TargetIndices</key>
-			<array/>
-			<key>Path</key>
-			<string>../Cartfile</string>
-		</dict>
-		<key>Info.plist</key>
-		<dict>
-			<key>Group</key>
-			<array>
-				<string>Supporting Files</string>
-			</array>
-			<key>Path</key>
-			<string>Supporting Files/Info.plist</string>
-		</dict>
-		<key>Resources</key>
-		<dict>
-			<key>Path</key>
-			<string>Resources</string>
-			<key>TargetIndices</key>
-			<array/>
-		</dict>
-		<key>../Gemfile</key>
-		<dict>
-			<key>TargetIndices</key>
-			<array/>
-			<key>Path</key>
-			<string>Gemfile</string>
-			<key>Group</key>
-			<array>
-				<string>Non-iOS Resources</string>
-			</array>
-		</dict>
-		<key>../fastlane</key>
-		<dict>
-			<key>TargetIndices</key>
-			<array/>
-			<key>Path</key>
-			<string>fastlane</string>
-		</dict>
-		<key>Global</key>
-		<dict>
-			<key>Path</key>
-			<string>Global</string>
-		</dict>
-		<key>Common</key>
-		<dict>
-			<key>Path</key>
-			<string>Common</string>
-		</dict>
-		<key>Sections</key>
-		<dict>
-			<key>Path</key>
-			<string>Sections</string>
-		</dict>
-		<key>Base.lproj/Main.storyboard</key>
-		<dict>
-			<key>Path</key>
-			<string>Main.storyboard</string>
-			<key>SortOrder</key>
-			<integer>99</integer>
-		</dict>
 		<key>AppWireframe.swift</key>
 		<dict>
 			<key>Group</key>
@@ -142,6 +102,47 @@
 			</array>
 			<key>Path</key>
 			<string>App/AppController.swift</string>
+		</dict>
+		<key>Resources</key>
+		<dict>
+			<key>Path</key>
+			<string>Resources</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>../fastlane</key>
+		<dict>
+			<key>TargetIndices</key>
+			<array/>
+			<key>Path</key>
+			<string>fastlane</string>
+		</dict>
+		<key>Global</key>
+		<dict>
+			<key>Path</key>
+			<string>Global</string>
+		</dict>
+		<key>Common</key>
+		<dict>
+			<key>Path</key>
+			<string>Common</string>
+		</dict>
+		<key>Sections</key>
+		<dict>
+			<key>Path</key>
+			<string>Sections</string>
+		</dict>
+		<key>Frameworks</key>
+		<dict>
+			<key>Path</key>
+			<string>Frameworks</string>
+		</dict>
+		<key>Base.lproj/Main.storyboard</key>
+		<dict>
+			<key>Path</key>
+			<string>Main.storyboard</string>
+			<key>SortOrder</key>
+			<integer>99</integer>
 		</dict>
 	</dict>
 </dict>

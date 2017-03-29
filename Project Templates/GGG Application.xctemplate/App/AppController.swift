@@ -1,9 +1,9 @@
 //
-//  ___FILENAME___
-//  ___PACKAGENAME___
+//  AppController.swift
+//  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
@@ -11,11 +11,10 @@ import UIKit
 class AppController {
     
     static let shared = AppController()
-    
     var appWireframe: AppWireframe?
     
-    // MARK: - Initializers
-    init() {
-        self.appWireframe = nil
+    func appDidLaunch() {
+        self.appWireframe?.showAppLaunchWireframe()
     }
+    
 }
