@@ -64,6 +64,7 @@
 						<string>../fastlane</string>
 						<string>Global</string>
 						<string>Common</string>
+						<string>Supporting Files</string>
 						<string>Sections</string>
 						<string>Resources</string>
 						<string>Frameworks</string>
@@ -76,6 +77,11 @@
 	</array>
 	<key>Definitions</key>
 	<dict>
+		<key>Supporting Files</key>
+		<dict>
+			<key>Path</key>
+			<string>Supporting Files</string>
+		</dict>
 		<key>AppWireframe.swift</key>
 		<dict>
 			<key>Group</key>
