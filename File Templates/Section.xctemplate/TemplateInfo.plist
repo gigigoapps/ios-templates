@@ -44,7 +44,7 @@
 			<key>Default</key>
 			<string>___VARIABLE_sceneName:identifier___Presenter / ___VARIABLE_sceneName:identifier___VC / ___VARIABLE_sceneName:identifier___Wireframe  </string>
 			<key>Identifier</key>
-			<string>productName</string>
+			<string>sectionFiles</string>
 			<key>Type</key>
 			<string>static</string>
 		</dict>
