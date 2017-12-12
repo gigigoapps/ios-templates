@@ -1,5 +1,5 @@
 //
-//  ___FILEBASENAMEASIDENTIFIER___Router.swift
+//  ___VARIABLE_sceneName___Router.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -9,15 +9,15 @@
 import Foundation
 import GIGLibrary
 
-struct ___FILEBASENAMEASIDENTIFIER___Wireframe {
+struct ___VARIABLE_sceneName___Wireframe {
     
-    /// Method to show the ___FILEBASENAMEASIDENTIFIER___ section
+    /// Method to show the ___VARIABLE_sceneName___ section
     ///
-    /// - Returns: ___FILEBASENAMEASIDENTIFIER___ View Controller with all dependencies
-    func show___FILEBASENAMEASIDENTIFIER___() -> ___FILEBASENAMEASIDENTIFIER___VC? {
-        guard let viewController = try? Instantiator<___FILEBASENAMEASIDENTIFIER___VC>().viewController() else { return nil }
-        let wireframe = ___FILEBASENAMEASIDENTIFIER___Wireframe()
-        let presenter = ___FILEBASENAMEASIDENTIFIER___Presenter(
+    /// - Returns: ___VARIABLE_sceneName___ View Controller with all dependencies
+    func show___VARIABLE_sceneName___() -> ___VARIABLE_sceneName___VC? {
+        guard let viewController = try? Instantiator<___VARIABLE_sceneName___VC>().viewController() else { return nil }
+        let wireframe = ___VARIABLE_sceneName___Wireframe()
+        let presenter = ___VARIABLE_sceneName___Presenter(
             view: viewController,
             wireframe: wireframe
         )

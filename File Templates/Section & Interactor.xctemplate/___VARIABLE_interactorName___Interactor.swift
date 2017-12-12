@@ -1,5 +1,5 @@
 //
-//  ___FILEBASENAMEASIDENTIFIER___Presenter.swift
+//  ___VARIABLE_sceneName___Presenter.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
