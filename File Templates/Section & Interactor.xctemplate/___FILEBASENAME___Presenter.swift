@@ -1,5 +1,5 @@
 //
-//  ___FILEBASENAMEASIDENTIFIER___Presenter.swift
+//  ___VARIABLE_sceneName___Presenter.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -8,16 +8,16 @@
 
 import Foundation
 
-protocol ___FILEBASENAMEASIDENTIFIER___UI: class {
+protocol ___VARIABLE_sceneName___UI: class {
     
 }
 
-struct ___FILEBASENAMEASIDENTIFIER___Presenter {
+struct ___VARIABLE_sceneName___Presenter {
     
     // MARK: - Public attributes
     
-    weak var view: ___FILEBASENAMEASIDENTIFIER___UI?
-    let wireframe: ___FILEBASENAMEASIDENTIFIER___Wireframe
+    weak var view: ___VARIABLE_sceneName___UI?
+    let wireframe: ___VARIABLE_sceneName___Wireframe
     
     // MARK: - Interactors
     

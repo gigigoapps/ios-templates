@@ -1,5 +1,5 @@
 //
-//  ___FILEBASENAMEASIDENTIFIER___VC.swift
+//  ___VARIABLE_sceneName___VC.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -9,11 +9,11 @@
 import UIKit
 import GIGLibrary
 
-class ___FILEBASENAMEASIDENTIFIER___VC: UIViewController, ___FILEBASENAMEASIDENTIFIER___UI {
+class ___VARIABLE_sceneName___VC: UIViewController, ___VARIABLE_sceneName___UI {
     
     // MARK: - Attributtes
     
-    var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter?
+    var presenter: ___VARIABLE_sceneName___Presenter?
     
     // MARK: - View life cycle
     
@@ -23,7 +23,7 @@ class ___FILEBASENAMEASIDENTIFIER___VC: UIViewController, ___FILEBASENAMEASIDENT
     }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___VC: Instantiable {
+extension ___VARIABLE_sceneName___VC: Instantiable {
     
     // MARK: - Instantiable
     
@@ -32,6 +32,6 @@ extension ___FILEBASENAMEASIDENTIFIER___VC: Instantiable {
     }
     
     public static func identifier() -> String? {
-        return "___FILEBASENAMEASIDENTIFIER___VC"
+        return "___VARIABLE_sceneName___VC"
     }
 }
