@@ -27,11 +27,7 @@ extension ___VARIABLE_sceneName___VC: Instantiable {
     
     // MARK: - Instantiable
     
-    public static func storyboard() -> String {
-        return ""
-    }
+    static var storyboard: String = ""
+    static var identifier: String = "___VARIABLE_sceneName___VC"
     
-    public static func identifier() -> String? {
-        return "___VARIABLE_sceneName___VC"
-    }
 }
