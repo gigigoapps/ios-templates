@@ -9,23 +9,24 @@
 import Foundation
 import GIGLibrary
 
-struct ___VARIABLE_sceneName___Wireframe {
+protocol ___VARIABLE_sceneName___WireframeInput {
+    func show___VARIABLE_sceneName___(in viewController: UIViewController?)
+    func show___VARIABLE_sceneName___(in viewController: UINavigationController)
+    func dismiss()
+}
+
+class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput {
     
     // MARK: - Private attributes
     
     private var viewController: UIViewController?
+    private var navigationController: UINavigationController?
     
     // MARK: - Public methods
     
     func show___VARIABLE_sceneName___(in viewController: UIViewController? = nil) {
         guard let pincodeValidatorVC = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading ___VARIABLE_sceneName___VC") }
-        if let navigationController = viewController as? UINavigationController {
-            self.viewController = navigationController
-            navigationController.show(
-                pincodeValidatorVC,
-                sender: self
-            )
-        } else if let viewController = viewController {
+        if let viewController = viewController {
             self.viewController = viewController
             viewController.present(pincodeValidatorVC, animated: true)
         } else {
@@ -35,8 +36,17 @@ struct ___VARIABLE_sceneName___Wireframe {
         }
     }
     
+    func show___VARIABLE_sceneName___(in viewController: UINavigationController) {
+        guard let pincodeValidatorVC = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading ___VARIABLE_sceneName___VC") }
+        self.navigationController = viewController
+        self.navigationController?.show(
+            pincodeValidatorVC,
+            sender: self
+        )
+    }
+    
     func dismiss() {
-        if let navigationController = self.viewController as? UINavigationController {
+        if let navigationController = self.navigationController {
             navigationController.popViewController(animated: true)
         } else {
             self.viewController?.dismiss(animated: true)
@@ -45,10 +55,9 @@ struct ___VARIABLE_sceneName___Wireframe {
     
     private func show___VARIABLE_sceneName___() -> ___VARIABLE_sceneName___VC? {
         guard let viewController = try? ___VARIABLE_sceneName___VC.instantiateFromStoryboard() else { return nil }
-        let wireframe = ___VARIABLE_sceneName___Wireframe()
         let presenter = ___VARIABLE_sceneName___Presenter(
             view: viewController,
-            wireframe: wireframe
+            wireframe: self
         )
         viewController.presenter = presenter
         return viewController

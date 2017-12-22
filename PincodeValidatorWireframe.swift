@@ -1,9 +1,9 @@
 //
 //  ___VARIABLE_sceneName___Router.swift
-//  ___PROJECTNAME___
+//  WOAH
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Created by José Estela on 12/12/17.
+//  Copyright © 2017 Gigigo Mobile Services S.L.. All rights reserved.
 //
 
 import Foundation
