@@ -24,13 +24,14 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
     
     // MARK: - Public methods
     
+    
     func show___VARIABLE_sceneName___(in viewController: UIViewController? = nil) {
         guard let pincodeValidatorVC = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading ___VARIABLE_sceneName___VC") }
         if let viewController = viewController {
             self.viewController = viewController
             viewController.present(pincodeValidatorVC, animated: true)
         } else {
-            let viewController = AppController.shared.appWireframe?.topViewController()
+            let viewController = self.topViewController()
             viewController?.present(pincodeValidatorVC, animated: true)
             self.viewController = viewController
         }
@@ -57,9 +58,18 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
         guard let viewController = try? ___VARIABLE_sceneName___VC.instantiateFromStoryboard() else { return nil }
         let presenter = ___VARIABLE_sceneName___Presenter(
             view: viewController,
-            wireframe: self
+            wireframe: self,
+            interactor: ___VARIABLE_sceneName___Interactor()
         )
         viewController.presenter = presenter
         return viewController
+    }
+    
+    private func topViewController() -> UIViewController? {
+        var rootVC = UIApplication.shared.keyWindow?.rootViewController
+        while let presentedController = rootVC?.presentedViewController {
+            rootVC = presentedController
+        }
+        return rootVC
     }
 }

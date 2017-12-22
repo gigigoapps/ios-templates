@@ -30,7 +30,7 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
             self.viewController = viewController
             viewController.present(pincodeValidatorVC, animated: true)
         } else {
-            let viewController = AppController.shared.appWireframe?.topViewController()
+            let viewController = self.topViewController()
             viewController?.present(pincodeValidatorVC, animated: true)
             self.viewController = viewController
         }
@@ -62,4 +62,13 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
         viewController.presenter = presenter
         return viewController
     }
+    
+    private func topViewController() -> UIViewController? {
+        var rootVC = UIApplication.shared.keyWindow?.rootViewController
+        while let presentedController = rootVC?.presentedViewController {
+            rootVC = presentedController
+        }
+        return rootVC
+    }
+    
 }
