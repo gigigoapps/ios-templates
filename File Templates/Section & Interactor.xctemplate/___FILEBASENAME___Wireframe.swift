@@ -54,8 +54,8 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
         }
     }
     
-    private func show___VARIABLE_sceneName___() -> vc___VARIABLE_sceneName___? {
-        guard let viewController = try? vc___VARIABLE_sceneName___.instantiateFromStoryboard() else { return nil }
+    private func show___VARIABLE_sceneName___() -> ___VARIABLE_sceneName___VC? {
+        guard let viewController = try? ___VARIABLE_sceneName___VC.instantiateFromStoryboard() else { return nil }
         let presenter = ___VARIABLE_sceneName___Presenter(
             view: viewController,
             wireframe: self,
