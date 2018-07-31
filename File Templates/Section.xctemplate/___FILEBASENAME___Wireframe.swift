@@ -1,5 +1,5 @@
 //
-//  ___VARIABLE_sceneName___Router.swift
+//  ___VARIABLE_sceneName___Wireframe.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -9,19 +9,66 @@
 import Foundation
 import GIGLibrary
 
-struct ___VARIABLE_sceneName___Wireframe {
+protocol ___VARIABLE_sceneName___WireframeInput {
+    func show___VARIABLE_sceneName___(in viewController: UIViewController?)
+    func show___VARIABLE_sceneName___(inNavigation viewController: UINavigationController)
+    func dismiss()
+}
+
+class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput {
     
-    /// Method to show the ___VARIABLE_sceneName___ section
-    ///
-    /// - Returns: ___VARIABLE_sceneName___ View Controller with all dependencies
-    func show___VARIABLE_sceneName___() -> ___VARIABLE_sceneName___VC? {
-        guard let viewController = try? Instantiator<___VARIABLE_sceneName___VC>().viewController() else { return nil }
-        let wireframe = ___VARIABLE_sceneName___Wireframe()
+    // MARK: - Private attributes
+    
+    private var viewController: UIViewController?
+    private var navigationController: UINavigationController?
+    
+    // MARK: - Public methods
+    
+    func show___VARIABLE_sceneName___(in viewController: UIViewController? = nil) {
+        guard let vc___VARIABLE_sceneName___ = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading vc___VARIABLE_sceneName___") }
+        if let viewController = viewController {
+            self.viewController = viewController
+            viewController.present(vc___VARIABLE_sceneName___, animated: true)
+        } else {
+            let viewController = self.topViewController()
+            viewController?.present(vc___VARIABLE_sceneName___, animated: true)
+            self.viewController = viewController
+        }
+    }
+    
+    func show___VARIABLE_sceneName___(inNavigation viewController: UINavigationController) {
+        guard let vc___VARIABLE_sceneName___ = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading vc___VARIABLE_sceneName___") }
+        self.navigationController = viewController
+        self.navigationController?.show(
+            vc___VARIABLE_sceneName___,
+            sender: self
+        )
+    }
+    
+    func dismiss() {
+        if let navigationController = self.navigationController {
+            navigationController.popViewController(animated: true)
+        } else {
+            self.viewController?.dismiss(animated: true)
+        }
+    }
+    
+    private func show___VARIABLE_sceneName___() -> ___VARIABLE_sceneName___VC? {
+        guard let viewController = try? ___VARIABLE_sceneName___VC.instantiateFromStoryboard() else { return nil }
         let presenter = ___VARIABLE_sceneName___Presenter(
             view: viewController,
-            wireframe: wireframe
+            wireframe: self
         )
         viewController.presenter = presenter
         return viewController
     }
+    
+    private func topViewController() -> UIViewController? {
+        var rootVC = UIApplication.shared.keyWindow?.rootViewController
+        while let presentedController = rootVC?.presentedViewController {
+            rootVC = presentedController
+        }
+        return rootVC
+    }
+    
 }

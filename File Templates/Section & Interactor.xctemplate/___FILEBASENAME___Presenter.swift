@@ -17,7 +17,7 @@ struct ___VARIABLE_sceneName___Presenter {
     // MARK: - Public attributes
     
     weak var view: ___VARIABLE_sceneName___UI?
-    let wireframe: ___VARIABLE_sceneName___Wireframe
+    let wireframe: ___VARIABLE_sceneName___WireframeInput
     
     // MARK: - Interactors
     
