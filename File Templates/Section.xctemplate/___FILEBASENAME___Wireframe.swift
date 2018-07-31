@@ -1,5 +1,5 @@
 //
-//  ___VARIABLE_sceneName___Router.swift
+//  ___VARIABLE_sceneName___Wireframe.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -11,7 +11,7 @@ import GIGLibrary
 
 protocol ___VARIABLE_sceneName___WireframeInput {
     func show___VARIABLE_sceneName___(in viewController: UIViewController?)
-    func show___VARIABLE_sceneName___(in viewController: UINavigationController)
+    func show___VARIABLE_sceneName___(inNavigation viewController: UINavigationController)
     func dismiss()
 }
 
@@ -25,22 +25,22 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
     // MARK: - Public methods
     
     func show___VARIABLE_sceneName___(in viewController: UIViewController? = nil) {
-        guard let pincodeValidatorVC = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading ___VARIABLE_sceneName___VC") }
+        guard let vc___VARIABLE_sceneName___ = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading vc___VARIABLE_sceneName___") }
         if let viewController = viewController {
             self.viewController = viewController
-            viewController.present(pincodeValidatorVC, animated: true)
+            viewController.present(vc___VARIABLE_sceneName___, animated: true)
         } else {
             let viewController = self.topViewController()
-            viewController?.present(pincodeValidatorVC, animated: true)
+            viewController?.present(vc___VARIABLE_sceneName___, animated: true)
             self.viewController = viewController
         }
     }
     
-    func show___VARIABLE_sceneName___(in viewController: UINavigationController) {
-        guard let pincodeValidatorVC = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading ___VARIABLE_sceneName___VC") }
+    func show___VARIABLE_sceneName___(inNavigation viewController: UINavigationController) {
+        guard let vc___VARIABLE_sceneName___ = self.show___VARIABLE_sceneName___() else { return LogWarn("Error loading vc___VARIABLE_sceneName___") }
         self.navigationController = viewController
         self.navigationController?.show(
-            pincodeValidatorVC,
+            vc___VARIABLE_sceneName___,
             sender: self
         )
     }
@@ -53,8 +53,8 @@ class ___VARIABLE_sceneName___Wireframe: ___VARIABLE_sceneName___WireframeInput 
         }
     }
     
-    private func show___VARIABLE_sceneName___() -> ___VARIABLE_sceneName___VC? {
-        guard let viewController = try? ___VARIABLE_sceneName___VC.instantiateFromStoryboard() else { return nil }
+    private func show___VARIABLE_sceneName___() -> vc___VARIABLE_sceneName___? {
+        guard let viewController = try? vc___VARIABLE_sceneName___.instantiateFromStoryboard() else { return nil }
         let presenter = ___VARIABLE_sceneName___Presenter(
             view: viewController,
             wireframe: self
